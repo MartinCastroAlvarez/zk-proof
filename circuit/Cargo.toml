@@ -1,0 +1,38 @@
+[package]
+name = "circuit"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ark-std = { version = "0.3.0", features = ["std"] }
+ark-relations = "0.3"
+ark-ff = { version = "0.3.0", features = ["std"] }
+ark-bn254 = "0.3.0"
+ark-groth16 = "0.3.0"
+rand = "0.8.5"
+base64 = "0.21"
+ark-serialize = "0.3.0"
+warp = "0.3"
+tokio = { version = "1.0", features = ["full", "macros"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1"
+tracing-subscriber = "0.2"
+env_logger = "0.11.6"
+log = "0.4.25"
+rustfmt = "0.10.0"
+clippy = "0.0.302"
+lazy_static = "1.5.0"
+alloy-rs = "0.2.1"
+alloy-provider = "0.11.0"
+alloy-transport-http = "0.11.0"
+ethers = "2.0.14"
+alloy-primitives = "0.8.20"
+hex = "0.4.3"
+reqwest = "0.12.12"
+alloy-core = "0.8.20"
+ark-ec = "0.5.0"
+
+[[bin]]
+name = "circuit"
+path = "src/main.rs"
