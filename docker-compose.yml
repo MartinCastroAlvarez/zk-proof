@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  zk:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - IMAGE_ID=7fbf2a9c7f59f4695fd21c52ed4836fe08558e91704d7d0020ce5bf71bc069bf
+    ports:
+      - "3030:3030"
+    networks:
+      - bridge
+    privileged: true
+    volumes:
+      - ./methods:/risc0/methods
+      - ./src:/risc0/src
+      - /var/run/docker.sock:/var/run/docker.sock  # DinD
+
+networks:
+  bridge:
+    driver: bridge 
